@@ -16,5 +16,7 @@ public class CarDemo {
 		
 		Collections.sort(cr);
 		System.out.println("Sort by Name: " + cr);
+		
+		System.out.println("Highest Value: " + cr.get(0));
 	}
 }
