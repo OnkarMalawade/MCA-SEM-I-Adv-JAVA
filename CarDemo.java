@@ -1,22 +1,28 @@
-import java.util.*;
+package mypack;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class CarDemo {
-	public static void main(String []args) {
-		List<Car> cr = new ArrayList<Car>();
-		cr.add(new Car("Jaguar",101111));
-		cr.add(new Car("Audi",201111));
-		cr.add(new Car("Maruti",301111));
-		cr.add(new Car("WagonR",101511));
-		cr.add(new Car("Ferarri",161111));
-		cr.add(new Car("Mercides",171111));
-		cr.add(new Car("Mustang",105111));
-		cr.add(new Car("Nano",17711));
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car c1 = new Car(5,"Maruti",10.55);
+		Car c2 = new Car(2,"i10",20.55);
+		Car c3 = new Car(3,"i20",30.55);
+		Car c4 = new Car(4,"Audi",40.55);
+		Car c5 = new Car(1,"Jaguar",50.55);
 		
-		System.out.println("Cars Details:" + cr);
+		ArrayList<Car> ar = new ArrayList<Car>();
 		
-		Collections.sort(cr);
-		System.out.println("Sort by Name: " + cr);
+		ar.add(c5);
+		ar.add(c4);
+		ar.add(c3);
+		ar.add(c2);
+		ar.add(c1);
 		
-		System.out.println("Highest Value: " + cr.get(0));
+		System.out.println("Cars - "+ ar);
+		Collections.sort(ar, new CarSort());
+		System.out.println("Sorted Cars - "+ ar);
 	}
+
 }

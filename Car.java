@@ -1,33 +1,17 @@
-public class Car implements Comparable<Car>{
+package mypack;
+
+public class Car {
+	int carNo;
 	String carNm;
-	int price;
-	
-	public Car(String carNm, int price) {
+	double carPr;
+	public Car(int carNo, String carNm, double carPr) {
 		super();
+		this.carNo = carNo;
 		this.carNm = carNm;
-		this.price = price;
+		this.carPr = carPr;
 	}
-	
 	@Override
 	public String toString() {
-		return "Car [car name=" + carNm +"price="+price + "]";
-	}
-
-	//@Override
-	//public int compareTo(Car o) {
-		// TODO Auto-generated method stub
-		//return carNm.compareToIgnoreCase(o.carNm);
-	//}
-	
-	public int compareTo(Car o) {
-		if(price < o.price) {
-			return 1;
-		}
-		else if(price > o.price) {
-			return -1;
-		}
-		else {
-			return 0;
-		}
+		return "Car [carNo=" + carNo + ", carNm=" + carNm + ", carPr=" + carPr + "]";
 	}
 }
